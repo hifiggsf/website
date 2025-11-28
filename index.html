@@ -11,38 +11,20 @@
       align-items:center;
       height:100vh;
     }
-    #player {
+    iframe {
       width:800px;
       height:450px;
+      border:none;
       border-radius:10px;
-      overflow:hidden;
     }
   </style>
 </head>
 <body>
 
-  <div id="player"></div>
-
-  <script>
-    // Load YouTube API Script
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.head.appendChild(tag);
-
-    let player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player("player", {
-        videoId: "NzKSVd4Dh8o",
-        playerVars: {
-          controls: 1,
-          rel: 1,            // <-- Recommendations will be shown
-          modestbranding: 1,
-          fs: 1,
-          playsinline: 1
-        }
-      });
-    }
-  </script>
+  <iframe 
+    src="https://www.youtube.com/embed/NzKSVd4Dh8o?rel=1&modestbranding=0&controls=1"
+    allowfullscreen>
+  </iframe>
 
 </body>
 </html>
