@@ -78,10 +78,10 @@
       player = new YT.Player('player', {
         videoId: 'NcTcYDjBNNk',
         playerVars: {
-          // Allow related videos (helps with ads)
-          rel: 1,
-          // Standard branding (helps with ads)
-          modestbranding: 0,
+          // Prevent related videos
+          rel: 0,
+          // Remove YouTube logo
+          modestbranding: 1,
           // Show controls
           controls: 1,
           // Enable fullscreen
